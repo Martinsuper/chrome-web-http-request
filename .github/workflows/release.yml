@@ -33,6 +33,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            .output/web-http-request-*.zip
+            dist/*.zip
           generate_release_notes: true
           draft: false
