@@ -9,6 +9,7 @@ export default defineConfig({
   manifest: {
     name: 'Web HTTP Request',
     description: 'Cookie 管理和 HTTP 请求工具',
+    version: '1.1.0',
     permissions: [
       'cookies',
       'activeTab',
@@ -20,6 +21,16 @@ export default defineConfig({
     ],
     action: {
       default_title: 'Web HTTP Request',
+      default_icon: {
+        '16': 'icon-16.png',
+        '48': 'icon-48.png',
+        '128': 'icon-128.png',
+      },
+    },
+    icons: {
+      '16': 'icon-16.png',
+      '48': 'icon-48.png',
+      '128': 'icon-128.png',
     },
   },
 });

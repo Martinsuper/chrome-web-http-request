@@ -1,10 +1,10 @@
 <template>
   <div class="popup-container">
-    <h1>Web HTTP Request</h1>
+    <h1><font-awesome-icon :icon="['fas', 'globe']" /> Web HTTP Request</h1>
 
     <!-- 当前页面信息 -->
     <div class="section">
-      <h2>当前页面信息</h2>
+      <h2><font-awesome-icon :icon="['fas', 'info-circle']" /> 当前页面信息</h2>
       <div class="info-item">
         <label>域名:</label>
         <span class="value">{{ tabInfo.domain }}</span>
@@ -17,7 +17,7 @@
 
     <!-- 请求配置 -->
     <div class="section">
-      <h2>发起请求</h2>
+      <h2><font-awesome-icon :icon="['fas', 'paper-plane']" /> 发起请求</h2>
       <div class="import-curl-wrapper">
         <button @click="showImportDialog = true" class="btn btn-secondary btn-import">
           导入 curl
@@ -92,7 +92,7 @@
 
     <!-- 响应结果 -->
     <div v-if="response" class="section response-section">
-      <h2>响应结果</h2>
+      <h2><font-awesome-icon :icon="['fas', 'server']" /> 响应结果</h2>
       <div class="response-status">
         状态码：<span :class="statusClass">{{ response.status }}</span>
       </div>
@@ -101,7 +101,7 @@
 
     <!-- 错误信息 -->
     <div v-if="error" class="section error-section">
-      <h2>错误信息</h2>
+      <h2><font-awesome-icon :icon="['fas', 'triangle-exclamation']" /> 错误信息</h2>
       <div class="error-message">{{ error }}</div>
     </div>
 
@@ -121,17 +121,17 @@
           ></textarea>
         </div>
         <div class="modal-footer">
-          <button @click="showImportDialog = false" class="btn btn-secondary">取消</button>
-          <button @click="parseAndImport" class="btn btn-primary">导入</button>
+          <button @click="showImportDialog = false" class="btn btn-secondary"><font-awesome-icon :icon="['fas', 'xmark']" /> 取消</button>
+          <button @click="parseAndImport" class="btn btn-primary"><font-awesome-icon :icon="['fas', 'check']" /> 导入</button>
         </div>
       </div>
     </div>
 
     <!-- Cookies 信息 -->
     <div class="section">
-      <h2>Cookies (<span class="cookie-count">{{ cookies.length }}</span>)</h2>
+      <h2><font-awesome-icon :icon="['fas', 'cookie']" /> Cookies (<span class="cookie-count">{{ cookies.length }}</span>)</h2>
       <div class="button-group">
-        <button @click="refreshCookies" class="btn btn-secondary">刷新</button>
+        <button @click="refreshCookies" class="btn btn-secondary"><font-awesome-icon :icon="['fas', 'rotate']" /> 刷新</button>
         <button @click="copyCookies" class="btn btn-secondary" :disabled="cookies.length === 0">
           复制 Cookies
         </button>
